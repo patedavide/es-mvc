@@ -7,14 +7,14 @@
     <input type="text" name="name" placeholder="Nome" required>
     <input type="email" name="email" placeholder="Email" required>
     <input type="url" name="linkimg" placeholder="Link Immagine" required>
-    <input type="text" name="numDaComprare" placeholder="numOggettoDaComprare" required>
-    <input type="text" name="prezzoOggetto" placeholder="prezzoOggetto" required>
+    <input type="text" name="quantitaOggetto" placeholder="Quantità Oggetto" required>
+    <input type="text" name="prezzoOggetto" placeholder="Prezzo Oggetto" required>
     <button type="submit">Aggiungi</button>
   </form>
   <ul>
     <% users.forEach(user => { %>
       <li>
-        <%= user.name %> - <%= user.email %> - <img src="<%= user.linkimg %>" width="100" - %= user.numDaComprare %> - <%= user.prezzoOggetto %>
+        <%= user.name %> - <%= user.email %> - <img src="<%= user.linkimg %>" width="100" > - <%= user.quantitaOggetto %> - <%= user.prezzoOggetto %>€
         <form action="/users/buy/<%= user.id %>" method="POST" style="display:inline;">
           <button type="submit">Acquista</button>
         </form>
