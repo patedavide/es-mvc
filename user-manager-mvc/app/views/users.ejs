@@ -14,7 +14,7 @@
   <ul>
     <% users.forEach(user => { %>
       <li>
-        <%= user.name %> - <%= user.email %> - <img src="<%= user.linkimg %>" width="100">
+        <%= user.name %> - <%= user.email %> - <img src="<%= user.linkimg %>" width="100" - %= user.numDaComprare %> - <%= user.prezzoOggetto %>
         <form action="/users/buy/<%= user.id %>" method="POST" style="display:inline;">
           <button type="submit">Acquista</button>
         </form>
