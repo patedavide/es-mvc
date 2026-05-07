@@ -17,3 +17,13 @@ exports.deleteUser = (req, res) => {
   User.delete(id);
   res.redirect('/users');
 };
+exports.buyUser = (req, res) => {  
+  const { id } = req.params;
+  User.buy(id);
+  res.redirect('/users');
+}
+exports.sellUser = (req, res) => {
+  const {id} = req.params;
+  User.sell(id);
+  res.redirect('/users');
+}
